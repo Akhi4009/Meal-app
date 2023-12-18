@@ -1,11 +1,11 @@
 import Link from "next/link"
 import classes from "./page.module.css"
 import MealGrid from "@/component/meal/meal-grid"
-import { getMeal } from "@/lib/meals"
+import { getMeals } from "@/lib/meals"
 import { Suspense } from "react"
 
 async function Meals(){
-    const meals = await getMeal()
+    const meals = await getMeals()
     
     return <MealGrid meals={meals}/>
 }
