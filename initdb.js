@@ -1,5 +1,10 @@
+
+const path = require("path")
 const sql = require('better-sqlite3');
-const db = sql('meals.db');
+
+const dbPath = path.join('meals.db')
+
+const db =new sql(dbPath);
 
 const dummyMeals = [
   {
@@ -197,3 +202,5 @@ async function initData() {
 }
 
 initData();
+
+db.close()
