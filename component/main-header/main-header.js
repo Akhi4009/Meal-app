@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 import logoImg from '@/assets/logo.png'
 import classes from "./main-header.module.css"
 import Image from 'next/image'
@@ -22,18 +21,20 @@ const MainHeader = () => {
     <NavLink href="/meals">
     Browse Meals
     </NavLink>
-    
     </li>
-
-    <li><NavLink href="/community">Foodies community</NavLink></li>
-    
+    <li>
+    <NavLink href="/community">
+    Foodies community
+    </NavLink>
+    </li>
     </ul>
     </nav>
-
     </header>
     </>
 
   )
 }
+    
+
 
 export default MainHeader

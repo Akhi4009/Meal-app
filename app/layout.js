@@ -12,9 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
       <MainHeader/>
-
       {children}
-        
       </body>
     </html>
   );

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import claases from "./image-slideshow.module.css"
 
 import burgerImg from '@/assets/burger.jpg';
 import curryImg from '@/assets/curry.jpg';

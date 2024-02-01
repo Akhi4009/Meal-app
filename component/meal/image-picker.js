@@ -6,17 +6,17 @@ import Image from "next/image"
 
 export default function ImagePicker({label,name}){
     const [pickedImage,setPickeImage] = useState()
-const imageInput= useRef()
-    function handlePickClick(){
+    const imageInput= useRef()
 
-        imageInput.current.click()
+    function handlePickClick(){
+         imageInput.current.click()
     }
 
-    function handleImageChane(e){
+    function handleImageChange(e){
         const file=e.target.files[0];
         if(!file){
-            return
             setPickeImage(null)
+            return
         }
 
         const fileReader = new FileReader()
@@ -25,8 +25,7 @@ const imageInput= useRef()
         }
 
         fileReader.readAsDataURL(file);
-
-    }
+     }
  
     return (<div className={classes.picker}>
     <label htmlFor={name}>{label}</label>
@@ -42,8 +41,7 @@ const imageInput= useRef()
      accept="image/png, image/jpeg" 
      name={name}
      ref={imageInput}
-     onChange={handleImageChane}
-     multiple
+     onChange={handleImageChange}
      required
      />
      <button className={classes.button} 

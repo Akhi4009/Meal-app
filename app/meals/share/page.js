@@ -3,16 +3,16 @@
 import {useFormState} from "react-dom"
 
 import ImagePicker from '@/component/meal/image-picker';
-import classes from './page.module.css';
 import shareMeal from '@/lib/action';
 import MealsFormSubmit from '@/component/meal/meal-form-submit';
 
+import classes from './page.module.css';
 
 
 
 export default function ShareMealPage() {
-
   const [state, formAction] = useFormState(shareMeal, {message: null});
+  
   return (
     <>
       <header className={classes.header}>
